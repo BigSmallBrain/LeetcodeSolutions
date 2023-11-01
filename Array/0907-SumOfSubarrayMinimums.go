@@ -7,21 +7,46 @@
 // -----------------------------------------------
 package main
 
-import "math"
+import (
+	"math"
+)
 
 // TODO 单调栈
 func sumSubarrayMins(arr []int) int {
-	n := int(math.Pow(10, 9)) + 7
-	res := 0
-	for i := 0; i < len(arr); i++ {
-		minVal := arr[i]
-		for j := i; j < len(arr); j++ {
-			if minVal > arr[j] {
-				minVal = arr[j]
-			}
-			res += minVal
-			res %= n
+	N := int(math.Pow(10, 9)) + 7
+	n := len(arr)
+	left, right := make([]int, n), make([]int, n)
+
+	stack := make([]int, 0)
+	for i := 0; i < n; i++ {
+		for len(stack) > 0 && arr[i] <= arr[stack[len(stack)-1]] {
+			stack = stack[:len(stack)-1]
 		}
+		if len(stack) == 0 {
+			left[i] = -1
+		} else {
+			left[i] = stack[len(stack)-1]
+		}
+		stack = append(stack, i)
+	}
+
+	stack = make([]int, 0)
+	for i := n - 1; i >= 0; i-- {
+		for len(stack) > 0 && arr[i] < arr[stack[len(stack)-1]] {
+			stack = stack[:len(stack)-1]
+		}
+		if len(stack) == 0 {
+			right[i] = n
+		} else {
+			right[i] = stack[len(stack)-1]
+		}
+		stack = append(stack, i)
+	}
+
+	res := 0
+	for i := 0; i < n; i++ {
+		res += arr[i] * (i - left[i]) * (right[i] - i)
+		res %= N
 	}
 	return res
 }

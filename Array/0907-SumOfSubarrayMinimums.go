@@ -11,7 +11,7 @@ import (
 	"math"
 )
 
-// TODO 单调栈
+// 单调栈
 func sumSubarrayMins(arr []int) int {
 	N := int(math.Pow(10, 9)) + 7
 	n := len(arr)

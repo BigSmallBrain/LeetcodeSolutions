@@ -7,6 +7,7 @@
 // -----------------------------------------------
 package main
 
+// 双指针
 func sortColors(nums []int) {
 	l, r := 0, len(nums)-1
 

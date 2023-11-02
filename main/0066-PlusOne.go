@@ -7,6 +7,7 @@
 // -----------------------------------------------
 package main
 
+// 进位
 func plusOne(digits []int) []int {
 	flag := false
 	digits[len(digits)-1] += 1

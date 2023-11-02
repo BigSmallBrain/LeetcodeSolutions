@@ -9,6 +9,7 @@ package main
 
 import "sort"
 
+// 划分数组
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	nums := append(nums1, nums2...)
 	sort.Ints(nums)

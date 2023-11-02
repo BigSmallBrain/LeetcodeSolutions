@@ -7,6 +7,7 @@
 // -----------------------------------------------
 package main
 
+// todo 下一个排列
 func nextPermutation(nums []int) {
 	if len(nums) <= 1 {
 		return

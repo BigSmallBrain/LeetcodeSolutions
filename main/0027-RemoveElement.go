@@ -7,6 +7,7 @@
 // -----------------------------------------------
 package main
 
+// 双指针
 func removeElement(nums []int, val int) int {
 	flag := len(nums)
 	for i := 0; i < flag; {

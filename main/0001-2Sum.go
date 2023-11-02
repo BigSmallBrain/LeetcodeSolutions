@@ -7,6 +7,7 @@
 // -----------------------------------------------
 package main
 
+// 哈希表
 func twoSum(nums []int, target int) []int {
 
 	if len(nums) == 0 {

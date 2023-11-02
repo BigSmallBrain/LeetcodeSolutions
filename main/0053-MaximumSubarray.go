@@ -11,6 +11,7 @@ import (
 	"math"
 )
 
+// 动态规划
 func maxSubArray(nums []int) int {
 	length := len(nums)
 	dp := make([]int, length)

@@ -12,6 +12,7 @@ import (
 	"sort"
 )
 
+// 双指针
 func threeSum(nums []int) [][]int {
 
 	sort.Ints(nums)

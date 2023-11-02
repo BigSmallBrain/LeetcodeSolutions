@@ -7,6 +7,7 @@
 // -----------------------------------------------
 package main
 
+// 单调栈
 func trap(height []int) int {
 	length := len(height)
 	if length == 1 || length == 2 {

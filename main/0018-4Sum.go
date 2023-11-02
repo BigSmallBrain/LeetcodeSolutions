@@ -11,6 +11,7 @@ import (
 	"sort"
 )
 
+// 双指针
 func fourSum(nums []int, target int) [][]int {
 	sort.Ints(nums)
 

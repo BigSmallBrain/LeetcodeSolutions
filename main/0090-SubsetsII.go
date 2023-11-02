@@ -11,6 +11,7 @@ import (
 	"sort"
 )
 
+// 动态规划
 func subsetsWithDup(nums []int) [][]int {
 	sort.Ints(nums)
 

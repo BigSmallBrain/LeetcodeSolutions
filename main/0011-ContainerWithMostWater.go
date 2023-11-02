@@ -7,6 +7,7 @@
 // -----------------------------------------------
 package main
 
+// 双指针
 func maxArea(height []int) int {
 
 	left, right := 0, len(height)-1

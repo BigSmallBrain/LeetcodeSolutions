@@ -7,6 +7,7 @@
 // -----------------------------------------------
 package main
 
+// 双指针
 func removeDuplicates(nums []int) int {
 	if len(nums) == 0 || len(nums) == 1 {
 		return len(nums)

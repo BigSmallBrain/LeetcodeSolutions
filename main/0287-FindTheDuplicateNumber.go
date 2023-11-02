@@ -7,6 +7,7 @@
 // -----------------------------------------------
 package main
 
+// 快慢指针
 func findDuplicate(nums []int) int {
 	slow, fast := 0, 0
 	for slow, fast = nums[slow], nums[nums[fast]]; slow != fast; {

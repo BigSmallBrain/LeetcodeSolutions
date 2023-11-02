@@ -9,6 +9,7 @@ package main
 
 import "sort"
 
+// 暴力解法
 func merge(nums1 []int, m int, nums2 []int, n int) {
 	if n == 0 {
 		return

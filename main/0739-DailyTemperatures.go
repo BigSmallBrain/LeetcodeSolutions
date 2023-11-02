@@ -5,8 +5,9 @@
 // @e-mail  : kingslayer5437@gmail.com
 // @time    : 2023/11/1 14:36
 // -----------------------------------------------
-package Stack
+package main
 
+// 单调栈
 func dailyTemperatures(temperatures []int) []int {
 	n := len(temperatures)
 	res := make([]int, n)

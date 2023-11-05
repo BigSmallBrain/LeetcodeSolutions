@@ -1,4 +1,4 @@
-![](MD-assets/Bottom_up.svg)
+![](assets/Bottom_up.svg)
 
 <div align="center">
     <img alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="500"/>
@@ -70,5 +70,5 @@
 
 <br/>
 
-![](MD-assets/Bottom_down.svg)
+![](assets/Bottom_down.svg)
 

@@ -7,7 +7,7 @@
 // -----------------------------------------------
 package main
 
-// 动态规划
+// 回溯
 func subsets(nums []int) [][]int {
 	n := len(nums)
 	res := make([][]int, 0, 1<<n)

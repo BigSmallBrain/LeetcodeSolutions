@@ -7,7 +7,7 @@
 // -----------------------------------------------
 package main
 
-func rotate(nums []int, k int) {
+func rotateArray(nums []int, k int) {
 	n := len(nums)
 	k %= n
 	if k == 0 {

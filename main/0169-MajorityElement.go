@@ -11,6 +11,7 @@ import (
 	"math/rand"
 )
 
+// 排序
 func majorityElement(nums []int) int {
 	n := len(nums)
 	if n == 1 {

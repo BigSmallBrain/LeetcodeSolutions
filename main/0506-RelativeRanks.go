@@ -12,6 +12,7 @@ import (
 	"strconv"
 )
 
+// 自定义排序
 func findRelativeRanks(score []int) []string {
 	n := len(score)
 	tempMap := make(map[int]int)

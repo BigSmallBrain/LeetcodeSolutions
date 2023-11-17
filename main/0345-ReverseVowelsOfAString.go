@@ -11,6 +11,7 @@ import (
 	"strings"
 )
 
+// 双指针
 func reverseVowels(s string) string {
 	res := []byte(s)
 	n := len(res)

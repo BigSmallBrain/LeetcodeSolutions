@@ -14,7 +14,7 @@ type StockSpanner struct {
 	stack  []int
 }
 
-func Constructor() StockSpanner {
+func ConstructorStockSpanner() StockSpanner {
 	return StockSpanner{}
 }
 

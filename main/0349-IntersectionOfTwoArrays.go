@@ -9,6 +9,8 @@ package main
 
 import "sort"
 
+// 排序 二分查找
+
 func intersection(nums1 []int, nums2 []int) []int {
 	sort.Ints(nums1)
 	sort.Ints(nums2)

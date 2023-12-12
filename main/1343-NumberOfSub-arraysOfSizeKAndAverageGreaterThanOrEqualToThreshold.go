@@ -7,6 +7,8 @@
 // -----------------------------------------------
 package main
 
+// 滑动窗口
+
 func numOfSubarrays(arr []int, k int, threshold int) int {
 	n := len(arr)
 	sum := 0

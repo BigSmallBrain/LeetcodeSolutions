@@ -7,10 +7,6 @@
 // -----------------------------------------------
 package main
 
-import (
-	"fmt"
-)
-
 // 滑动窗口 哈希表
 
 func findSubstring(s string, words []string) []int {
@@ -49,9 +45,4 @@ func findSubstring(s string, words []string) []int {
 		}
 	}
 	return res
-}
-
-func main() {
-	strs := []string{"word", "good", "best", "good"}
-	fmt.Println(findSubstring("wordgoodgoodgoodbestword", strs))
 }

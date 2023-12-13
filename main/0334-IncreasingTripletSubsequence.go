@@ -29,7 +29,3 @@ func increasingTriplet(nums []int) bool {
 	}
 	return false
 }
-
-func main() {
-	increasingTriplet([]int{1, 5, 0, 4, 1, 3})
-}

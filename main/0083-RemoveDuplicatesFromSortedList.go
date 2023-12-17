@@ -9,12 +9,12 @@ package main
 
 // 链表
 
-type listNode struct {
+type ListNode struct {
 	Val  int
-	Next *listNode
+	Next *ListNode
 }
 
-func deleteDuplicates(head *listNode) *listNode {
+func deleteDuplicates(head *ListNode) *ListNode {
 	if head == nil {
 		return head
 	}

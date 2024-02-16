@@ -14,8 +14,7 @@ func maxProfit0122(prices []int) int {
 	dp := make([]int, 2)
 	dp[0], dp[1] = 0, -prices[0]
 	for i := 1; i < n; i++ {
-		dp[0] = max(dp[0], dp[1]+prices[i])
-		dp[1] = max(dp[1], dp[0]-prices[i])
+		dp[0], dp[1] = max(dp[0], dp[1]+prices[i]), max(dp[1], dp[0]-prices[i])
 	}
 	return max(dp[0], dp[1])
 }

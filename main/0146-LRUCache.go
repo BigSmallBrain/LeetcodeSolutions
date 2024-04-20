@@ -79,10 +79,3 @@ func (this *LRUCache) removeTail() int {
 	this.removeNode(this.tail.prev)
 	return key
 }
-
-/**
- * Your LRUCache object will be instantiated and called as such:
- * obj := Constructor(capacity);
- * param_1 := obj.Get(key);
- * obj.Put(key,value);
- */

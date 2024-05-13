@@ -7,12 +7,14 @@
 // -----------------------------------------------
 package main
 
+// 背包问题
+
 func lastStoneWeightII(stones []int) int {
 	sum := 0
 	for _, stone := range stones {
 		sum += stone
 	}
-	target := sum / 2
+	target := sum >> 1
 	dp := make([]int, target+1)
 	for _, stone := range stones {
 		for i := target; i >= stone; i-- {

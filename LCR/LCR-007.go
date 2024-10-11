@@ -8,41 +8,45 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
 func threeSum(nums []int) [][]int {
-
+	n := len(nums)
 	sort.Ints(nums)
-	res := make([][]int, 0)
-	resMap := make(map[string][]int)
-	// 遍历
-	for i := 0; i < len(nums)-2; i++ {
-		left, right := i+1, len(nums)-1
-		for right > left {
-			sum := nums[i] + nums[left] + nums[right]
-			if sum == 0 {
-				tempRes := []int{nums[i], nums[left], nums[right]}
-				tempResStr := fmt.Sprintf("%v", tempRes)
-				resMap[tempResStr] = tempRes
-				right--
-				left++
+	ans := [][]int{}
+	if n > 2 {
+		for i, x := range nums[:n-2] {
+			if i > 0 && nums[i] == nums[i-1] {
+				continue
 			}
-			// 结果偏小
-			if sum < 0 {
-				left++
+			if x+nums[i+1]+nums[i+2] > 0 {
+				break
 			}
-			// 结果偏大
-			if sum > 0 {
-				right--
+			if x+nums[n-1]+nums[n-2] < 0 {
+				continue
+			}
+			j, k := i+1, n-1
+			for j < k {
+				s := x + nums[j] + nums[k]
+				if s > 0 {
+					k--
+				} else if s < 0 {
+					j++
+				} else {
+					ans = append(ans, []int{x, nums[j], nums[k]})
+					j = j + 1
+					for ; j < k && nums[j] == nums[j-1]; j++ {
+
+					}
+					k = k - 1
+					for ; j < k && nums[k] == nums[k+1]; k-- {
+
+					}
+				}
 			}
 		}
+	}
 
-	}
-	// 转换结果
-	for _, value := range resMap {
-		res = append(res, value)
-	}
-	return res
+	return ans
 }
